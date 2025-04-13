@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 import { BackgoundComponent } from "../backgound/backgound.component";
 
-
 @Component({
-  selector: 'app-login',
+  selector: 'app-sign-up',
   imports: [BackgoundComponent],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.css'
 })
-export class LoginComponent {
+export class SignUpComponent {
 
-
-  
 }
