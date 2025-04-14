@@ -1,15 +1,36 @@
 
 <app-backgound></app-backgound>
+<!-- Background Image -->
+
+
+<!-- Login Form -->
 <div
-  class="w-full md:w-3/12 absolute right-0 left-0 p-12 bg-black my-36 mx-auto text-white rounded-lg opacity-75 shadow-lg shadow-red-900/50">
-  <h1 class="font-bold text-3xl py-4 text-center">Netflix Log in</h1>
-  <input type="email" placeholder="Enter your email" class="border-2 w-60 text-center" id="hover-id" />
-
-  <input type="password" placeholder="Enter your password" class="border-2 w-60 mt-3 text-center" id="hover-id" />
-  <div class="bg-indigo-500 shadow-lg shadow-red-500/50 w-60 mt-3 text-center" id="hover-button">
-    <button class="text-center">SUBMIT</button>
+  class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12 xl:w-3/12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-8 sm:p-10 bg-black opacity-80 text-white rounded-lg shadow-lg shadow-red-900/50 z-10">
+  
+  <h1 class="font-bold text-3xl py-4 text-center ">Log in</h1>
+  
+  <input 
+    type="email" 
+    placeholder="Enter your email"
+    class="border-2 border-gray-400 w-full px-4 py-2 text-white  rounded mb-4"
+    id="hover-id"
+  />
+  
+  <input 
+    type="password" 
+    placeholder="Enter your password"
+    class="border-2 border-gray-400 w-full px-4 py-2 text-white  rounded mb-4"
+    id="hover-id"
+  />
+  
+  <button 
+    class="w-full bg-amber-600 py-2 rounded shadow-lg shadow-red-500/50 font-semibold hover:bg-amber-700 transition duration-200"
+    id="hover-button">
+    SUBMIT
+  </button>
+  
+  <div class="mt-4 text-center text-sm space-x-4">
+    <a href="/forget-password" class="underline hover:text-amber-400">Forgot password?</a>
+    <a href="/sign-up" class="underline hover:text-amber-400">Sign up</a>
   </div>
-
-  <a href="/forget-password" class="mr-15">forget password</a>
-  <a href="/sign-up">sign-up</a>
 </div>
