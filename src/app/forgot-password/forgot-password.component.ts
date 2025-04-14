@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { BackgoundComponent } from "../backgound/backgound.component";
 
 @Component({
