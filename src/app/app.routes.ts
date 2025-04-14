@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { DashboaredComponent } from './dashboared/dashboared.component';
 
 export const routes: Routes = [
   {
@@ -14,5 +15,10 @@ export const routes: Routes = [
     path:'sign-up'
     , 
     loadComponent:()=> import('./sign-up/sign-up.component').then((c)=>c.SignUpComponent)
+  }
+  ,{
+    path:'dashboared'
+    , 
+    loadComponent:()=> import('./dashboared/dashboared.component').then((c)=>c.DashboaredComponent)
   }
 ];
