@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { BackgoundComponent } from "../backgound/backgound.component";
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GoogleSignInComponent } from "../google-sign-in/google-sign-in.component";
 
 
 @Component({
   selector: 'app-login',
-  imports: [BackgoundComponent, FormsModule],
+  imports: [BackgoundComponent, FormsModule, GoogleSignInComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

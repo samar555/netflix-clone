@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+@Input({required:true}) userName:string=""
+menus:string[]=["Home","TV Shows","Views & Popular","My List","Browse By Language"]
 
 }

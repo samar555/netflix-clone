@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header class="h-[68px] z-10 bg-gray-900 sticky top-0 flex items-center justify-between ">
+  <div class="flex gap-5">
+    <img width="110" src="images/Netflix-Logo.png" alt="no load" />
+    <ul class="flex items-center">
+      @for (item of menus; track $index) {
+      <li class="text-neutral-200 cursor-pointer text-sm font-extralight hover:text-gray-400 transition-[1s] pr-5">{{ item }}</li>
+      }
+    </ul>
+  </div>
+  <div class="text-white pr-5">
+    <a href="/"><span>Welcome</span> {{userName}} <strong> </strong></a>
+  </div>
+</header>

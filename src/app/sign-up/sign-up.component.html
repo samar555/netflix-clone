@@ -2,11 +2,27 @@
 
 <div
   class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12 xl:w-3/12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-8 sm:p-10 bg-black opacity-80 text-white rounded-lg shadow-lg shadow-red-900/50 z-10">
+  @if (error) {
+
+  <div id="alert-2"
+    class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+    role="alert">
+    <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+      viewBox="0 0 20 20">
+      <path
+        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+    </svg>
+    <span class="sr-only">Info</span>
+    <div class="ms-3 text-sm font-medium">
+      required field
+    </div>
+
+  </div>
+
+
+  }
+
   @if (toggleAlert) {
-
-
-
-
   <div id="alert-border-3"
     class="flex items-center p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800"
     role="alert">
@@ -32,22 +48,23 @@
   <h1 class="font-bold text-3xl py-4 text-center ">sign-up</h1>
 
   <input type="text" [(ngModel)]="name" name="name" placeholder="Enter your name"
-    class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4"  />
-  <select  name="gender" [(ngModel)]="gender" id="cars"  class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4" >
-    <option value="Male" selected class="bg-black">Male</option>
+    class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4" />
+  <select name="gender" [(ngModel)]="gender" id="cars"
+    class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4">
+    <option value="Male" [selected]="true" class="bg-black">Male</option>
     <option value="Female" class="bg-black">Female</option>
     <option value="Other" class="bg-black">Other</option>
-    
+
   </select>
   <input type="email" [(ngModel)]="email" name="email" placeholder="Enter your email"
-    class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4"  />
+    class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4" />
 
   <input type="password" [(ngModel)]="password" name="password" placeholder="Enter your password"
-    class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4"  />
+    class="border-2 border-gray-400 w-full px-4 py-2 text-white rounded mb-4" />
 
   <button
     class="w-full bg-amber-600 py-2 rounded shadow-lg shadow-red-500/50 font-semibold hover:bg-amber-700 transition duration-200"
-     (click)="saveData()">
+    (click)="saveData()">
     SUBMIT
   </button>
 
@@ -55,4 +72,5 @@
     <a href="/forget-password" class="underline hover:text-amber-400 ">Forgot password?</a>
     <a href="/" class="underline hover:text-amber-400 ">sign in </a>
   </div>
+  <app-google-sign-in></app-google-sign-in>
 </div>
